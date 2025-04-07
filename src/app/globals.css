@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Styles "Mes Projets" */
+/* Styles personnalisés pour le carousel */
+
+/* Styles du carousel */
+.custom-carousel {
+    margin-bottom: 40px;;
+}
+
+.custom-carousel .slide {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.custom-carousel .control-dots {
+    bottom: 20px;
+}
+
+.custom-carousel .dot {
+    background: #FAF8F5 !important;
+    box-shadow: none !important;
+    opacity: 0.5;
+    margin: 0 4px;
+}
+
+.custom-carousel .dot.selected {
+    opacity: 1;
+}
+
+.custom-carousel .control-arrow {
+    opacity: 1 !important;
+}
+
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-slide {
+    animation: slide 10s linear infinite;
+}
+
+.animate-slide:hover {
+    animation-play-state: paused;
+}
+
+
+
+@media (min-width: 768px) {
+    .custom-carousel .control-dots {
+        bottom: -40px;
+    }
+
+    .animate-slide {
+        animation: slide 20s linear infinite;
+    } 
+}
