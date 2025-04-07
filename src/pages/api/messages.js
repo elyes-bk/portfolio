@@ -21,7 +21,6 @@ export default async function handler(req, res) {
     }
   }
 
-  // ❌ DELETE : Supprimer un message par ID
   if (req.method === "DELETE") {
     const { id } = req.body;
 

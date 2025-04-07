@@ -1,9 +1,9 @@
 import clientPromise from "../../../lib/mongodb";
 export default async function handler(req, res) {
   if (req.method === "POST") {
-    const { name, email, message } = req.body;
+    const { name, email, message, subject } = req.body;
 
-    if (!name || !email || !message) {
+    if (!name || !email || !message || !subject) {
       return res.status(400).json({ error: "Tous les champs sont requis" });
     }
 
@@ -16,6 +16,7 @@ export default async function handler(req, res) {
         name,
         email,
         message,
+        subject,
         createdAt: new Date(),
       };
 
