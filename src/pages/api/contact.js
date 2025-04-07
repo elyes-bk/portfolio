@@ -1,4 +1,4 @@
-import clientPromise from "@/lib/mongodb"; // ou "../../lib/mongodb" si tu n'utilises pas `@`
+import clientPromise from "../../../lib/mongodb"; // ou "../../lib/mongodb" si tu n'utilises pas `@`
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
