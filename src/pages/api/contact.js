@@ -9,7 +9,7 @@ export default async function handler(req, res) {
 
     try {
       const client = await clientPromise;
-      const db = client.db("portfolio"); // remplace "portfolio" par le nom de ta base si besoin
+      const db = client.db("portfolio");
       const collection = db.collection("messages");
 
       const newMessage = {
