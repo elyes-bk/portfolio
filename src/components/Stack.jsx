@@ -27,11 +27,11 @@ const Stack = () => {
         },
         {
             title: "NodeJS",
-            imageUrl: "/assets/NodeJS.svg"
+            imageUrl: "/assets/nodejs.svg"
         },
         {
             title: "NextJS",
-            imageUrl: "/assets/NextJS.svg"
+            imageUrl: "/assets/nextjs.svg"
         },
         {
             title: "JavaScript",
@@ -39,15 +39,15 @@ const Stack = () => {
         },
         {
             title: "Tailwind CSS",
-            imageUrl: "/assets/Tailwind.svg"
+            imageUrl: "/assets/tailwind.svg"
         },
         {
             title: "HTML",
-            imageUrl: "/assets/HTML.svg"   
+            imageUrl: "/assets/html.svg"   
         },
         {
             title: "CSS",
-            imageUrl: "/assets/CSS.svg"
+            imageUrl: "/assets/css.svg"
         },
         {
             title: "WordPress",
@@ -55,7 +55,7 @@ const Stack = () => {
         },
         {
             title: "Figma",
-            imageUrl: "/assets/Figma.svg"
+            imageUrl: "/assets/figma.svg"
         },
     ]
 

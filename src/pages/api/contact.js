@@ -1,9 +1,13 @@
 import clientPromise from "../../../lib/mongodb";
+
 export default async function handler(req, res) {
   if (req.method === "POST") {
     const { name, email, message, subject } = req.body;
 
+    console.log("📨 Reçu :", { name, email, message, subject });
+
     if (!name || !email || !message || !subject) {
+      console.log("⛔ Champs manquants");
       return res.status(400).json({ error: "Tous les champs sont requis" });
     }
 
@@ -21,6 +25,7 @@ export default async function handler(req, res) {
       };
 
       const result = await collection.insertOne(newMessage);
+      console.log("✅ Message stocké :", result.insertedId);
 
       return res.status(200).json({
         message: "Message stocké avec succès",
@@ -28,7 +33,7 @@ export default async function handler(req, res) {
       });
 
     } catch (error) {
-      console.error(error);
+      console.error("🔥 Erreur dans MongoDB :", error);
       return res.status(500).json({ error: "Erreur serveur" });
     }
 
