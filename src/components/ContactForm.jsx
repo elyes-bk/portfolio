@@ -8,7 +8,6 @@ const ContactForm = () => {
         subject: '',
         message: ''
     });
-
     const [status, setStatus] = useState(null);
 
     const handleChange = (e) => {
