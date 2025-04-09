@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { getSession } from "next-auth/react";
+import { redirect } from "next/dist/server/api-utils";
 
 export default function AdminPage() {
 
@@ -35,8 +37,8 @@ export default function AdminPage() {
     }catch(error){
       console.error('Erreur de suppression:', error);
     }
+    
   }
-
   return(
     <div style={{ padding: '2rem', fontFamily: 'Arial' }}>      
       <h1>Admin Page</h1>
@@ -67,4 +69,20 @@ export default function AdminPage() {
       )}
     </div>
   )
+}
+
+export async function getServerSideProps(context){
+  const session = await getSession(context);
+    
+    if(!session){
+      return{
+        redirect:{
+          destination: 'api/auth/signin',
+          permanent: false,
+        }
+      }
+    }
+    return{
+      props: {session},
+    }
 }

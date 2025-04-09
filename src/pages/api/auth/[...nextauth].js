@@ -1,15 +1,14 @@
-"use client";
-import { useSession } from "next-auth/react";
-import { redirect } from "next/navigation";
+import NextAuth from "next-auth";
+import GitHubProvider from "next-auth/providers/github";
 
-export default function AdminPage() {
+export default NextAuth({
+  providers: [
+    GitHubProvider({
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET,
+    }),
+  ],
 
-  const { session, status } = useSession();
 
-  if (status === "loading") return <p>Chargement...</p>;
-  if (!session){
-    return redirect("/");
-  }
-
-  return <div>Bienvenue dans l’espace admin</div>;
-}
+  secret: process.env.NEXTAUTH_SECRET,
+});
