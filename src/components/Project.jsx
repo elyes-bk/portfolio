@@ -38,19 +38,19 @@ const Project = () => {
             component: <Morpion/>
         },
         {
-            title: "Projet 2",
-            description: "Description du projet 2",
-            imageUrl: "/assets/pc.jpg"
+            title: "Site WordPress",
+            description: "Création d'un site vitrine pour une apporteuse d'affaires en utilisant WordPress et GreenShift",
+            imageUrl: "/assets/pc.jpg",
+            techno: ["wordpress, ","greenshift"],
         },
         {
-            title: "Projet 3",
-            description: "Description du projet 3",
-            imageUrl: "/assets/pc.jpg"
-        },
-        {
-            title: "Projet 4",
-            description: "Description du projet 4",
-            imageUrl: "/assets/pc.jpg"
+            title: "Site de jeux pour enfants",
+            description: ["Création d'un site de jeux pour enfants de 4 à 8 ans en utilisant React et Node.js.",
+                "Integration des jeux sur le site avec un systeme de gestion de compte, de point et de récompense d'image générée par l'IA",
+                "Création d'un wireframe et d'une maquette sur Figma",
+                "Mise en place d'un systeme de sécurité pour les données utilisateurs et de gestion des cookies"],
+            imageUrl: "/assets/pc.jpg",
+            techno: ["react, ","node.js"]
         }
     ];
 

@@ -1,43 +1,30 @@
-import clientPromise from "../../../lib/mongodb";
-import { ObjectId } from "mongodb";
+import clientPromise from '../../../lib/mongodb';
 
 export default async function handler(req, res) {
-  const client = await clientPromise;
-  const db = client.db("portfolio"); // remplace par le nom exact de ta base
-  const collection = db.collection("messages");
-
-  // 📥 GET : Récupérer tous les messages, triés par date décroissante
-  if (req.method === "GET") {
-    try {
-      const messages = await collection
-        .find({})
-        .sort({ createdAt: -1 }) // tri décroissant
-        .toArray();
-
-      return res.status(200).json(messages);
-    } catch (error) {
-      console.error(error);
-      return res.status(500).json({ error: "Erreur serveur" });
-    }
+  if (req.method !== 'POST') {
+    return res.status(405).json({ message: 'Méthode non autorisée' });
   }
 
-  if (req.method === "DELETE") {
-    const { id } = req.body;
+  const { name, email, message } = req.body;
 
-    if (!id) {
-      return res.status(400).json({ error: "ID manquant" });
-    }
-
-    try {
-      await collection.deleteOne({ _id: new ObjectId(id) });
-      return res.status(200).json({ message: "Message supprimé" });
-    } catch (error) {
-      console.error(error);
-      return res.status(500).json({ error: "Erreur lors de la suppression" });
-    }
+  if (!name || !email || !message) {
+    return res.status(400).json({ message: 'Champs requis manquants' });
   }
 
-  // Méthode non autorisée
-  res.setHeader("Allow", ["GET", "DELETE"]);
-  res.status(405).end(`Méthode ${req.method} non autorisée`);
+  try {
+    const client = await clientPromise;
+    const db = client.db('portfolio'); // Remplace par ton nom de DB
+
+    await db.collection('messages').insertOne({
+      name,
+      email,
+      message,
+      createdAt: new Date(),
+    });
+
+    return res.status(200).json({ message: 'Message reçu avec succès !' });
+  } catch (error) {
+    console.error('Erreur MongoDB:', error);
+    return res.status(500).json({ message: 'Erreur serveur' });
+  }
 }

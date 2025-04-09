@@ -1,0 +1,10 @@
+pour la creation du backend avec nextjs 
+
+avec vercel, mongodb et o2switch
+
+création lib/mongodb.js
+Ce fichier permet de réutiliser une seule instance MongoDB même en mode dev sur Vercel.
+
+création de l'api /pages/api/messages
+
+mise de uri mongodb dans .env MONGO_URI=...
