@@ -81,7 +81,7 @@ export async function getServerSideProps(context){
     if(!session){
       return{
         redirect:{
-          destination: 'api/auth/signin',
+          destination: 'api/auth/signin?callbackUrl=/admin',
           permanent: false,
         }
       }
