@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getSession } from "next-auth/react";
-import { redirect } from "next/dist/server/api-utils";
+import { signOut } from "next-auth/react";
 
 export default function AdminPage() {
 
@@ -40,7 +40,11 @@ export default function AdminPage() {
     
   }
   return(
-    <div style={{ padding: '2rem', fontFamily: 'Arial' }}>      
+    <div style={{ padding: '2rem', fontFamily: 'Arial' }}>  
+    
+      <button onClick={()=>signOut({ callbackUrl: '/' })}>
+        Déconnexion
+      </button>
       <h1>Admin Page</h1>
 
       {loading ? (
