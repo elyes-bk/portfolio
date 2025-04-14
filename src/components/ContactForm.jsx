@@ -41,7 +41,7 @@ const ContactForm = () => {
 
     return (
         <section id='contact' className="min-h-screen  py-20 bg-[#1E3A5F]">
-            <div className="w-full max-w-2xl mx-auto px-4">
+            <div className="w-full max-w-2xl mx-auto px-6">
                 <h2 className="text-3xl font-bold text-center text-[#FAF8F5] mb-10">Contact</h2>
                 
                 <form onSubmit={handleSubmit} className="space-y-6 bg-[#FAF8F5] p-8 rounded-lg shadow-xl">

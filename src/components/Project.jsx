@@ -61,8 +61,8 @@ const Project = () => {
     }
 
     return (
-        <section id='projects' className="flex flex-col items-center py-20 bg-[#1E3A5F]">
-            <h2 className="text-3xl font-bold text-center text-[#FAF8F5] mb-10">Mes Projets</h2>
+        <section className="flex flex-col items-center py-20 bg-[#1E3A5F]">
+            <h2 className="font-bold text-center text-[#FAF8F5] mb-10">Mes Projets</h2>
             <div className="w-full md:max-w-[768px] lg:max-w-[1200px] px-4">
                 <Carousel
                     showArrows={true}
@@ -97,10 +97,10 @@ const Project = () => {
                                 <img 
                                     src={project.imageUrl} 
                                     alt={project.title}
-                                    className="w-full max-h-[180px] aspect-video object-cover rounded-lg mb-4" 
+                                    className="w-full max-h-[180px] aspect-video object-cover rounded-lg" 
                                 />
-                                <h3 className="text-xl font-bold text-[#1E3A5F] mb-2">{project.title}</h3>
-                                <p className="text-base text-[#2B2B2B] flex-grow">{project.techno}</p>
+                                <h4 className="font-bold text-[#1E3A5F] flex-grow flex items-center justify-center">{project.title}</h4>
+                                <p className="text-[#2B2B2B] m-0">{project.techno}</p>
                                 <button className="mt-4 bg-[#1E3A5F] text-[#FAF8F5] py-2 px-4 rounded hover:bg-opacity-90 transition-all w-full sm:w-auto"
                                 onClick={() => openPopUp(project)}>
                                     Voir plus

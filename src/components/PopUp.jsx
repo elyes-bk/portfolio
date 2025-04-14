@@ -25,7 +25,7 @@ function PopUp({ isOpen, onClose, project }) {
                     </div>
 
                     {/* Right : Description & Techno */}
-                    <div className="flex-1 space-y-4">
+                    <div className="flex-1 space-y-4 flex flex-col justify-center">
                         <div>
                             <h4 className="text-lg font-semibold text-[#1E3A5F] mb-1">Description</h4>
                             <p className="text-gray-700">{project.description}</p>
