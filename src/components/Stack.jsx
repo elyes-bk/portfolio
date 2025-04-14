@@ -60,7 +60,7 @@ const Stack = () => {
     ]
 
     return (
-        <section className="py-16 bg-[#1E3A5F] overflow-hidden">
+        <section id="stack" className="py-16 bg-[#1E3A5F] overflow-hidden">
             <h2 className="text-3xl font-bold text-center text-[#FAF8F5] mb-10">Technologies</h2>
             
             {/* Vue mobile: grille fixe */}

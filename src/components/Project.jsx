@@ -61,7 +61,7 @@ const Project = () => {
     }
 
     return (
-        <section className="flex flex-col items-center py-20 bg-[#1E3A5F]">
+        <section id='projects' className="flex flex-col items-center py-20 bg-[#1E3A5F]">
             <h2 className="text-3xl font-bold text-center text-[#FAF8F5] mb-10">Mes Projets</h2>
             <div className="w-full md:max-w-[768px] lg:max-w-[1200px] px-4">
                 <Carousel

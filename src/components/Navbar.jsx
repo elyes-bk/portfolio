@@ -13,7 +13,7 @@ function Navbar(props){
             Logo
           </a>
 
-          {/* Menu Mobile */}
+          {/* Menu Mobile Burger*/}
           <div className="block md:hidden">
             <button 
               onClick={() => setIsOpen(!isOpen)}

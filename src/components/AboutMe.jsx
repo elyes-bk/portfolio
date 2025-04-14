@@ -37,7 +37,7 @@ const AboutMe = () => {
     ];
 
     return(
-        <section className="min-h-screen flex items-center flex-col justify-center gap-5 py-16 bg-[#FAF8F5]">
+        <section id="about" className="min-h-screen flex items-center flex-col justify-center gap-5 py-16 bg-[#FAF8F5]">
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-20">
                 <div className="w-full text-center md:w-1/2 space-y-6 ">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1E3A5F] uppercase">À propos de moi</h2>

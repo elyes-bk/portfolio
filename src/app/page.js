@@ -12,19 +12,19 @@ export default function Home() {
   
   const encres = [
     {name: 'Accueil', ref: '/'},
-    {name: 'A propos', ref: '/about'},
-    {name: 'Projets', ref: '/projects'},
-    {name: 'Contact', ref: '/contact'},
+    {name: 'A propos', ref: '#about'},
+    {name: 'Projets', ref: '#projects'},
+    {name: 'Contact', ref: '#contact'},
   ]
   
   return (
     <div>
       <Navbar encres = {encres}/>
-      <Accueil/>
-      <AboutMe/>
-      <Project/>
-      <Stack/>
-      <ContactForm/>
+      <Accueil id="accueil"/>
+      <AboutMe id="about"/>
+      <Project id="projects"/>
+      <Stack id="stack"/>
+      <ContactForm id="contact"/>
     </div>
   );
 }
