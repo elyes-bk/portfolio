@@ -1,44 +1,97 @@
-import React from "react";
+import React from "react"
 
 function PopUp({ isOpen, onClose, project }) {
-    if (!isOpen) return null;
+  if (!isOpen) return null
 
-    return (
-        <div className="fixed inset-0 bg-black bg-opacity-40 z-[100] flex items-center justify-center">
-            <div className="bg-white rounded-2xl border-2 border-black p-6 w-[90%] max-w-4xl relative z-[200] shadow-lg">
-                {/* Close Button */}
-                <button
-                    onClick={onClose}
-                    className="absolute top-4 right-4 text-[#1E3A5F] hover:opacity-80 text-xl"
-                >
-                    ✕
-                </button>
+  return (
+    <div
+      className="
+        fixed inset-0 z-[100]
+        flex items-center justify-center
+        bg-black/60 backdrop-blur-sm
+      "
+    >
+      <div
+        className="
+          relative z-[200]
+          w-[90%] max-w-5xl
+          rounded-3xl
+          bg-white/5
+          backdrop-blur-xl
+          border border-white/10
+          shadow-[0_40px_120px_rgba(0,0,0,0.7)]
+          p-8 md:p-10
+          text-white
+        "
+      >
+        {/* Close button */}
+        <button
+          onClick={onClose}
+          className="
+            absolute top-4 right-4
+            w-10 h-10
+            flex items-center justify-center
+            rounded-full
+            bg-white/10
+            hover:bg-white/20
+            transition
+            text-white
+          "
+        >
+          ✕
+        </button>
 
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-center text-[#1E3A5F] mb-6">{project.title}</h3>
+        {/* Title */}
+        <h3 className="text-2xl md:text-3xl font-bold text-center mb-10">
+          {project.title}
+        </h3>
 
-                {/* Content layout */}
-                <div className="flex flex-col lg:flex-row gap-6">
-                    {/* Left : Component de jeu */}
-                    <div className="flex-1 flex items-center justify-center border border-gray-200 rounded-lg p-4 bg-gray-50">
-                        {project.component}
-                    </div>
+        {/* Content */}
+        <div className="flex flex-col lg:flex-row gap-8">
 
-                    {/* Right : Description & Techno */}
-                    <div className="flex-1 space-y-4 flex flex-col justify-center">
-                        <div>
-                            <h4 className="text-lg font-semibold text-[#1E3A5F] mb-1">Description</h4>
-                            <p className="text-gray-700">{project.description}</p>
-                        </div>
-                        <div>
-                            <h4 className="text-lg font-semibold text-[#1E3A5F] mb-1">Technologies utilisées</h4>
-                            <p className="text-gray-700">{project.techno}</p>
-                        </div>
-                    </div>
-                </div>
+          {/* Left : component / content */}
+          {(project.component || project.content) && (
+            <div
+              className="
+                flex-1
+                bg-white/5
+                border border-white/10
+                rounded-2xl
+                p-6
+                flex items-center justify-center
+              "
+            >
+              {project.component || project.content}
             </div>
+          )}
+
+          {/* Right : text */}
+          <div className="flex-1 space-y-6 flex flex-col justify-center">
+
+            {/* Description */}
+            <div>
+              <h4 className="text-lg font-semibold text-purple-400 mb-2">
+                Description
+              </h4>
+              <p className="text-gray-300 leading-relaxed">
+                {project.description}
+              </p>
+            </div>
+            {/* Tech */}
+            <div>
+              <h4 className="text-lg font-semibold text-purple-400 mb-2">
+                Technologies utilisées
+              </h4>
+              <p className="text-gray-300">
+                {project.techno}
+              </p>
+            </div>
+
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  )
 }
 
-export default PopUp;
+export default PopUp

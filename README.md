@@ -43,3 +43,8 @@ Voir la BASE DE DONNEE:
 ```bash
 npx prisma studio
 ```
+
+```
+auth github
+portfolio
+id et clé dans .env et vercel variable d'environnement
