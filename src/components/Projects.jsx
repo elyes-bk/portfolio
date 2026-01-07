@@ -11,7 +11,7 @@ export default function Projects() {
   const projects = [
     {
       title: "Sebi La Gazelle",
-      subtitle: "Plateforme de jeu pour enfant (Projet de cours)",
+      subtitle: "Plateforme de jeu pour enfant",
       description:
         "Création d'une plateforme de jeu en ligne pour enfant de 4 à 8 ans. \
         Développement de deux jeux éducatif (mathématique et réflexe) avec un systeme de score et de récompense générer automatiquement par l'IA",
@@ -31,11 +31,21 @@ export default function Projects() {
     },
     {
       title: "Vera Web",
-      subtitle: "Intelligence artificielle de vérification d'information (Projet de cours)",
+      subtitle: "Intelligence artificielle de vérification d'information",
       description:
         "Vera est une IA de vérification d'information accéssible par WhatsApp et Instagram. \
         Elle permet au utilisateur de posé des questions afin de savoir si une info est vrai ou non avec des sources données. \
         Notre rôle dans ce projet ? Refonte de la Landing Page ainsi que l'ajout de Vera Web sur le site en utilisant son API",
+      imageUrl: "/assets/pc.jpg",
+      component:"oui",
+      techno: "Angular, NestJs",
+    },
+    {
+      title: "Voix Publique",
+      subtitle: "Voix Publique est une PWA de recensement des événements et de l’histoire de Paris. ",
+      description:
+        "Elle permet de centraliser les rassemblements publics (manifestations, festivals, expositions) tout en valorisant les récits historiques liés aux lieux de la capitale.\
+        L’objectif est d’offrir aux Parisiens et aux habitants de la région une nouvelle manière de découvrir Paris, à travers ses événements, son histoire et ses lieux chargés de mémoire.",
       imageUrl: "/assets/pc.jpg",
       component:"oui",
       techno: "Angular, NestJs",
