@@ -88,8 +88,8 @@ export default function Projects() {
       className="relative scroll-mt-32 overflow-hidden space-y-10"
     >
 
-      <h2 className="relative z-10 pt-0 text-center text-3xl md:text-4xl font-semibold text-white">
-        Projets <span className="text-purple-400">professionnels</span> 
+      <h2 className="relative z-10 pt-0 text-center text-2xl md:text-3xl font-semibold text-white">
+        <span className="text-purple-400">Projets </span>professionnels 
       </h2>
 
       {/* Carousel */}

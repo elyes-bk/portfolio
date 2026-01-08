@@ -8,11 +8,11 @@ export default function Stack({ stacks }) {
     >
       {/* Title */}
       <div className="text-center px-4 space-y-10">
-        <h2 className="font-bold text-2xl md:text-4xl">
-          Technologies <span className="text-purple-400">que j’utilise</span>
+        <h2 className="font-bold text-2xl md:text-3xl">
+          <span className="text-purple-400">Technologies </span>utilisé
         </h2>
         <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto">
-          Les outils et technologies que j’utilise au quotidien pour concevoir
+          Les outils et technologies que j’ai pu utiliser pour concevoir
           des applications modernes et performantes.
         </p>
       </div>

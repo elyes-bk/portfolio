@@ -16,7 +16,7 @@ function Navbar({ encres }) {
       "
     >
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between ">
 
           {/* Logo */}
           <a href="#accueil" className="flex items-center gap-2">
@@ -92,11 +92,12 @@ function Navbar({ encres }) {
 >
   <div
     className="
-      mx-4 mt-2
-      w-2/4
-      bg-purple-600/30
+      mx-4 my-2
+      w-full
+      
+      bg-purple-500/90
       backdrop-blur-xl
-      border border-purple-400/30
+      border border-purple-400
       rounded-2xl
       shadow-[0_20px_60px_rgba(0,0,0,0.6)]
       py-4
@@ -114,7 +115,6 @@ function Navbar({ encres }) {
           text-center
           rounded-xl
           text-sm font-semibold text-white
-          bg-purple-600/90
           hover:bg-purple-600/70
           transition
         "

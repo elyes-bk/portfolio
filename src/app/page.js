@@ -59,7 +59,8 @@ export default function Home() {
 
   return (
     <div>
-      <main className="space-y-32 pt-[150px] pb-[100px]">
+      <main className="space-y-20 py-[80px] 
+      md:space-y-32 md:py-[150px] text-sm md:text-base">
         <Hero />
         <Stacks stacks={stacks} />
         <Projects />

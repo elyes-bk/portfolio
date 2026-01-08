@@ -10,7 +10,7 @@ export default function About({ time }) {
       className="relative scroll-mt-32 flex flex-col items-center space-y-10"
     >
       {/* Titre */}
-      <h3 className="font-bold text-center text-2xl md:text-4xl">
+      <h3 className="font-bold text-center text-2xl md:text-3xl">
         Mon <span className="text-purple-400">parcours</span>
       </h3>
 

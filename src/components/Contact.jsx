@@ -24,7 +24,7 @@ export default function Contact(){
     >
       <div className="relative z-10 max-w-3xl mx-auto px-6 space-y-10">
         {/* Titre */}
-        <h2 className=" text-center text-2xl md:text-4xl font-bold">
+        <h2 className=" text-center text-2xl md:text-3xl font-bold">
             Me <span className="text-purple-400">contacter</span>
         </h2>
         <p className="mt-4 text-gray-400 max-w-xl mx-auto">
@@ -40,16 +40,16 @@ export default function Contact(){
             backdrop-blur-xl
             border border-white/10
             rounded-2xl
-            p-8
-            space-y-6
+            p-4
+            space-y-2
             shadow-[0_30px_80px_rgba(0,0,0,0.6)]
           "
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 space-y-2 md:space-y-0 md:space-x-2">
 
             {/* Nom */}
             <div>
-              <label className="block text-sm text-gray-300 mb-1">
+              <label className="block text-gray-300 mb-1">
                 Nom
               </label>
               <input
@@ -73,7 +73,7 @@ export default function Contact(){
 
             {/* Email */}
             <div>
-              <label className="block text-sm text-gray-300 mb-1">
+              <label className="block text-gray-300 mb-1">
                 Email
               </label>
               <input
@@ -99,7 +99,7 @@ export default function Contact(){
 
           {/* Sujet */}
           <div>
-            <label className="block text-sm text-gray-300 mb-1">
+            <label className="block text-gray-300 mb-1">
               Sujet
             </label>
             <input
@@ -122,7 +122,7 @@ export default function Contact(){
 
           {/* Message */}
           <div>
-            <label className="block text-sm text-gray-300 mb-1">
+            <label className="block text-gray-300 mb-1">
               Message
             </label>
             <textarea
@@ -150,7 +150,7 @@ export default function Contact(){
             type="submit"
             disabled={state.submitting}
             className="
-                w-full py-3 rounded-full
+                w-full py-2 rounded-full
                 bg-purple-400/20
                 border border-purple-400/40
                 text-purple-300 font-medium
