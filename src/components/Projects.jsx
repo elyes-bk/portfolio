@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import Morpion from '@/components/projets/games/Morpion'
 import PopUp from '@/components/PopUp'
 
 export default function Projects() {
@@ -16,6 +15,7 @@ export default function Projects() {
         "Création d'une plateforme de jeu en ligne pour enfant de 4 à 8 ans. \
         Développement de deux jeux éducatif (mathématique et réflexe) avec un systeme de score et de récompense générer automatiquement par l'IA",
       imageUrl: "/assets/pc.jpg",
+      display: '',
       techno: "React.js, Node.js",
     },
     {
@@ -27,6 +27,8 @@ export default function Projects() {
         Panier, commande, demande d'information directement en ligne, \
         coté admin: ajout, modification, supression de produit et gestion des demandes client",
       imageUrl: "/assets/pc.jpg",
+      display: "externe",
+      url:'https://nawwcake.vercel.app/',
       techno: "Next.js, Prisma ORM, Supabase",
     },
     {
@@ -37,7 +39,8 @@ export default function Projects() {
         Elle permet au utilisateur de posé des questions afin de savoir si une info est vrai ou non avec des sources données. \
         Notre rôle dans ce projet ? Refonte de la Landing Page ainsi que l'ajout de Vera Web sur le site en utilisant son API",
       imageUrl: "/assets/pc.jpg",
-      component:"oui",
+      display: 'video',
+      content:'',
       techno: "Angular, NestJs",
     },
     {
@@ -47,6 +50,7 @@ export default function Projects() {
         "Elle permet de centraliser les rassemblements publics (manifestations, festivals, expositions) tout en valorisant les récits historiques liés aux lieux de la capitale.\
         L’objectif est d’offrir aux Parisiens et aux habitants de la région une nouvelle manière de découvrir Paris, à travers ses événements, son histoire et ses lieux chargés de mémoire.",
       imageUrl: "/assets/pc.jpg",
+      display: '',
       component:"oui",
       techno: "Next.js, Supabase",
     },
@@ -137,7 +141,7 @@ export default function Projects() {
               {/* CARTE */}
               <div
                 className="
-                  relative w-[300px] h-[400px]
+                  relative w-[290px] h-[400px]
                   rounded-2xl
                   bg-white/5
                   backdrop-blur-xl

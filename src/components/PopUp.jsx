@@ -50,27 +50,18 @@ function PopUp({ isOpen, onClose, project }) {
         <div className="flex flex-col lg:flex-row gap-8">
 
           {/* Left : component / content */}
-          {(project.component || project.content) && (
-            <div
-              className="
-                flex-1
-                bg-white/5
-                border border-white/10
-                rounded-2xl
-                p-6
-                flex items-center justify-center
-              "
-            >
-              {project.component || project.content}
-            </div>
-          )}
+          
 
           {/* Right : text */}
           <div className="flex-1 space-y-6 flex flex-col justify-center">
 
+            {project.display === "externe" ?
+              <a href={project.url} className="font-bold underline">Voir le site</a> : ""
+            }
+
             {/* Description */}
             <div>
-              <h4 className="text-lg font-semibold text-purple-400 mb-2">
+              <h4 className="text-base font-semibold text-purple-400 mb-2">
                 Description
               </h4>
               <p className="text-gray-300 leading-relaxed">
@@ -79,14 +70,13 @@ function PopUp({ isOpen, onClose, project }) {
             </div>
             {/* Tech */}
             <div>
-              <h4 className="text-lg font-semibold text-purple-400 mb-2">
+              <h4 className="text-base font-semibold text-purple-400 mb-2">
                 Technologies utilisées
               </h4>
               <p className="text-gray-300">
                 {project.techno}
               </p>
             </div>
-
           </div>
         </div>
       </div>

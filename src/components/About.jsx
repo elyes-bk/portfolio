@@ -29,7 +29,7 @@ export default function About({ time }) {
               shadow-lg
             "
           >
-            <p className="text-sm text-pink-400 font-semibold">
+            <p className="text-sm text-purple-400 font-semibold">
               {item.period}
             </p>
 
@@ -60,7 +60,7 @@ export default function About({ time }) {
       <div className="hidden md:block w-full ">
 
         {/* Dates */}
-        <div className="flex mb-10 px-[70px]">
+        <div className="flex mb-10 px-[40px]">
           {time.map((item, index) => (
             <div
               key={index}
