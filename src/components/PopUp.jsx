@@ -8,7 +8,7 @@ function PopUp({ isOpen, onClose, project }) {
       className="
         fixed inset-0 z-[100]
         flex items-center justify-center
-        bg-black/60 backdrop-blur-sm
+        bg-black/80 backdrop-blur-sm
       "
     >
       <div
