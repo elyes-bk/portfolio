@@ -10,24 +10,22 @@ export default function Projects() {
   const projects = [
     {
       title: "Sebi La Gazelle",
-      subtitle: "Plateforme de jeu pour enfant",
-      description:
-        "Création d'une plateforme de jeu en ligne pour enfant de 4 à 8 ans. \
-        Développement de deux jeux éducatif (mathématique et réflexe) avec un systeme de score et de récompense générer automatiquement par l'IA",
+      subtitle: "Plateforme de jeux éductatifs pour enfants",
+      description:"Création d’une plateforme de jeux en ligne destinée aux enfants de 4 à 8 ans. \
+        Développement de deux jeux éducatifs (mathématiques et réflexes) intégrant un système de score et de récompenses générées automatiquement par l’intelligence artificielle.",
       imageUrl: "/assets/pc.jpg",
       display: '',
       techno: "React.js, Node.js",
     },
     {
       title: "NawwCake",
-      subtitle: "Patisserie en ligne",
+      subtitle: "Site de pâtisserie en ligne",
       description:
-        "Développement du site d'une patisserie en ligne, création complète de la charte graphique en passant par le prototypage, le maquettage, \
-        jusqu'à la livraison de la solution. \
-        Panier, commande, demande d'information directement en ligne, \
-        coté admin: ajout, modification, supression de produit et gestion des demandes client",
+        "Développement d’un site de pâtisserie en ligne, incluant la création complète de la charte graphique, du prototypage et du maquettage jusqu’à la livraison de la solution finale. \
+          Mise en place des fonctionnalités de panier, de commande et de demande d’informations en ligne. \
+          Côté administration : ajout, modification et suppression de produits, ainsi que la gestion des demandes clients.",
       imageUrl: "/assets/pc.jpg",
-      display: "externe",
+      //display: "externe",
       url:'https://nawwcake.vercel.app/',
       techno: "Next.js, Prisma ORM, Supabase",
     },
@@ -35,9 +33,9 @@ export default function Projects() {
       title: "Vera Web",
       subtitle: "Intelligence artificielle de vérification d'information",
       description:
-        "Vera est une IA de vérification d'information accéssible par WhatsApp et Instagram. \
-        Elle permet au utilisateur de posé des questions afin de savoir si une info est vrai ou non avec des sources données. \
-        Notre rôle dans ce projet ? Refonte de la Landing Page ainsi que l'ajout de Vera Web sur le site en utilisant son API",
+        "Vera est une intelligence artificielle de vérification de l’information, accessible via WhatsApp et Instagram.\
+          Elle permet aux utilisateurs de poser des questions afin de vérifier la véracité d’une information, en s’appuyant sur des sources fiables.\
+          Notre rôle dans ce projet : refonte de la landing page ainsi que l’intégration de Vera Web sur le site, en utilisant son API.",
       imageUrl: "/assets/pc.jpg",
       display: 'video',
       content:'',
@@ -45,10 +43,10 @@ export default function Projects() {
     },
     {
       title: "Voix Publique",
-      subtitle: "Voix Publique est une PWA de recensement des événements et de l’histoire de Paris. ",
+      subtitle: "PWA de recensement des événements et de l’histoire de Paris.",
       description:
-        "Elle permet de centraliser les rassemblements publics (manifestations, festivals, expositions) tout en valorisant les récits historiques liés aux lieux de la capitale.\
-        L’objectif est d’offrir aux Parisiens et aux habitants de la région une nouvelle manière de découvrir Paris, à travers ses événements, son histoire et ses lieux chargés de mémoire.",
+        "Elle permet de centraliser les rassemblements publics (manifestations, festivals, expositions) tout en valorisant les récits historiques liés aux lieux emblématiques de la capitale.\
+          L’objectif est d’offrir aux Parisiens et aux habitants de la région une nouvelle manière de découvrir Paris, à travers ses événements, son histoire et ses lieux chargés de mémoire.",
       imageUrl: "/assets/pc.jpg",
       display: '',
       component:"oui",

@@ -58,6 +58,15 @@ function PopUp({ isOpen, onClose, project }) {
             {project.display === "externe" ?
               <a href={project.url} className="font-bold underline">Voir le site</a> : ""
             }
+            {/* Subtitle */}
+            <div>
+              <h4 className="text-base font-semibold text-purple-400 mb-2">
+                Sous titre
+              </h4>
+              <p className="text-gray-300 leading-relaxed">
+                {project.subtitle}
+              </p>
+            </div>
 
             {/* Description */}
             <div>

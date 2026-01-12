@@ -19,7 +19,7 @@ function Navbar({ encres }) {
         <div className="flex items-center justify-between ">
 
           {/* Logo */}
-          <a href="#accueil" className="flex items-center gap-2">
+          <a href="/#accueil" className="flex items-center gap-2">
             <Image
               src={logo}
               width={50}

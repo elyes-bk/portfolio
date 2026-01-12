@@ -34,12 +34,11 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-300 leading-relaxed">
-            Passionné par le développement web, je suis actuellement en préparation de ma 3ᵉ année
-            de Bachelor et à la recherche d’une alternance en tant que développeur web.
-            <br />
-            J’accorde une attention particulière à <span className="text-white font-medium">React</span> et
-            <span className="text-white font-medium"> Next.js</span>, que j’apprécie pour leur flexibilité,
-            leurs performances et leurs écosystèmes modernes.
+            À l’issue de mon <span className="font-bold uppercase text-purple-400">Bachelor en développement web</span>, 
+            j’ai fait le choix de m’orienter vers la <span className="font-bold uppercase text-purple-400">cybersécurité</span>.
+            <br/>
+            Cette décision fait suite à mon intérêt pour le fonctionnement des systèmes informatiques et 
+            pour la conception de solutions web robustes et sécurisées.
           </p>
 
           {/* CTA optionnel */}

@@ -25,13 +25,19 @@ export default function Home() {
   const time = [
     {
       period: "2024 - aujourd'hui",
-      title: "Bachelor",
+      title: "Bachelor développement web",
       diplome: "Bachelor développement web",
+      poste: "Développeur web",
+      description:"Acquisition de compétences en développement web, en particulier en JavaScript ainsi que ses frameworks et bibliothèques, grâce à la réalisation de projets de cours et de projets professionnels collaboratifs",
+      alternance: true
     },
     {
       period: "2023 - 2024",
       title: "Licence Informatique",
       diplome: "Licence scientifique, 1ère année, Spécialité informatique",
+      description:"Initiation aux bases de l’algorithmique à travers des langages tels que Python et C++.\
+        Réalisation de projets pédagogiques, notamment un jeu d’échecs et un générateur de tableaux d’abstraction géométrique",
+      alternance: false,
     },
     {
       period: "2018 - 2023",
@@ -39,28 +45,32 @@ export default function Home() {
       poste: "Gestionnaire de transport",
       description:
         "Gestion des équipes de livraisons, des planning, de la flotte de camion, de la gestion des stocks. Gestion de la relation client ainsi que la partie administrative.",
+      alternance: false,
     },
     {
       period: "2017 - 2018",
       title: "Titre Responsable d'exploitation",
       poste: "Gestionnaire de transport",
       diplome:
-        "Titre de responsable d'exploitation, Transport de marchandise terrestre en alternance (BAC +3)",
+        "Titre de responsable d'exploitation, Transport de marchandise terrestre (BAC +3)",
       description:
         "Gestion des opérations de transport et coordination des équipes. Gestion de l'administratif, gestion des plannings, facturation des tournées et livraison",
+      alternance: true,
     },
     {
       period: "2014 - 2017",
-      title: "BAC PRO Maintenance",
+      title: "BAC PRO Maintenance des équipements industrielles",
       poste: "Technicien de maintenance (SMC PNEUMATIQUE)",
       diplome: "BAC PRO Maintenance des équipements industriels en alternance",
+      description:"",
+      alternance: true,
     },
   ]
 
   return (
     <div>
-      <main className="space-y-20 py-[80px] 
-      md:space-y-32 md:py-[150px] text-sm md:text-base">
+      <main className="space-y-20 pt-[80px] pb-[50px]
+      md:space-y-32 md:pt-[150px] md:pb-[80px] text-sm md:text-base">
         <Hero />
         <Stacks stacks={stacks} />
         <Projects />

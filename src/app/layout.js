@@ -1,5 +1,7 @@
 import "./globals.css"
 import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
+
 
 export const metadata = {
   title: "Elyes Ben Kilani",
@@ -10,10 +12,10 @@ export const metadata = {
 }
 
 const encres = [
-  { name: "Accueil", ref: "#accueil" },
-  { name: "Projets", ref: "#projects" },
-  { name: "A propos", ref: "#about" },
-  { name: "Contact", ref: "#contact" },
+  { name: "Accueil", ref: "/#accueil" },
+  { name: "Projets", ref: "/#projects" },
+  { name: "A propos", ref: "/#about" },
+  { name: "Contact", ref: "/#contact" },
 ]
 
 export default function RootLayout({ children }) {
@@ -50,6 +52,8 @@ export default function RootLayout({ children }) {
         <main>
           {children}
         </main>
+
+        <Footer/>
 
       </body>
     </html>
