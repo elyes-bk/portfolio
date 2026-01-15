@@ -21,7 +21,7 @@ const encres = [
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className="relative text-[#FAF8F5]">
+      <body className="relative text-[#FAF8F5] mt-[50px]">
 
         {/* BACKGROUND GLOBAL */}
         <div className="fixed inset-0 -z-10 bg-gradient-to-b from-[#0B021D] via-[#12062E] to-[#0B021D]">

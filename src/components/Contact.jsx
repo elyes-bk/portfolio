@@ -64,8 +64,8 @@ export default function Contact(){
                   text-white
                   placeholder-gray-400
                   focus:outline-none
-                  focus:border-pink-500
-                  focus:ring-1 focus:ring-pink-500
+                  focus:border-purple-500
+                  focus:ring-1 focus:ring-purple-500
                   transition
                 "
               />
@@ -88,8 +88,8 @@ export default function Contact(){
                   text-white
                   placeholder-gray-400
                   focus:outline-none
-                  focus:border-pink-500
-                  focus:ring-1 focus:ring-pink-500
+                  focus:border-purple-500
+                  focus:ring-1 focus:ring-purple-500
                   transition
                 "
               />
@@ -113,8 +113,8 @@ export default function Contact(){
                 px-4 py-3
                 text-white
                 focus:outline-none
-                focus:border-pink-500
-                focus:ring-1 focus:ring-pink-500
+                focus:border-purple-500
+                focus:ring-1 focus:ring-purple-500
                 transition
               "
             />
@@ -137,8 +137,8 @@ export default function Contact(){
                 text-white
                 resize-none
                 focus:outline-none
-                focus:border-pink-500
-                focus:ring-1 focus:ring-pink-500
+                focus:border-purple-500
+                focus:ring-1 focus:ring-purple-500
                 transition
               "
             />

@@ -44,7 +44,8 @@ export default function Hero() {
           {/* CTA optionnel */}
           <div className="pt-4 w-full">
             <a
-              href="#contact"
+              href="/cv_ben_kilani_elyes.pdf"
+              download
               className="w-full px-3 py-2 rounded-full
                 bg-purple-400/20 
                 border border-purple-400/40
@@ -54,7 +55,7 @@ export default function Hero() {
                 transition
                 disabled:opacity-50"
 >
-              Me contacter
+              Télécharger mon CV
             </a>
           </div>
         </div>
