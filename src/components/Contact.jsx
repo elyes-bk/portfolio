@@ -30,8 +30,6 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative overflow-hidden">
-      {/* Decorative background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-purple-600/5 blur-[120px] -z-10" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 space-y-16">
         <div className="text-center space-y-4">
