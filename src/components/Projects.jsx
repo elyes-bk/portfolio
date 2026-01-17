@@ -81,7 +81,7 @@ export default function Projects() {
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-purple-600/5 blur-[150px] -z-10" />
 
       <div className="max-w-7xl mx-auto px-6 mb-20">
-        <div className="flex flex-col md:flex-row items-end justify-between gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-4">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
               PROJETS <br />
