@@ -6,10 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'beige-sable': '#E6D5B8',
-        'bleu-nuit': '#1E3A5F',
-        'blanc-casse': '#FAF8F5',
-        'noir-charbon': '#2B2B2B',
+        'main-bg': '#05010d',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

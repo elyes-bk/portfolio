@@ -77,7 +77,7 @@ function Navbar({ encres }) {
           border-b border-white/10
         "
       >
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
           {/* Logo */}
           <a href="/#accueil" className="flex items-center gap-2 z-[210]">
             <Image
@@ -147,7 +147,7 @@ function Navbar({ encres }) {
             exit="exit"
             className="
               fixed inset-0 z-[150]
-              bg-[#0A0219]
+              bg-main-bg
               flex flex-col items-center justify-center
               pt-20
             "

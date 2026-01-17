@@ -2,10 +2,9 @@ import "./globals.css"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 
-
 export const metadata = {
-  title: "Elyes Ben Kilani",
-  description: "Bienvenue sur mon portfolio.",
+  title: "Elyes Ben Kilani — Dev Web & Cyber",
+  description: "Développeur web passionné par l'innovation et la cybersécurité.",
   icons: {
     icon: "/assets/favicon.svg",
   },
@@ -14,47 +13,30 @@ export const metadata = {
 const encres = [
   { name: "Accueil", ref: "/#accueil" },
   { name: "Projets", ref: "/#projects" },
-  { name: "A propos", ref: "/#about" },
+  { name: "Parcours", ref: "/#about" },
   { name: "Contact", ref: "/#contact" },
 ]
 
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className="relative text-[#FAF8F5] mt-[50px]">
+      <body className="antialiased selection:bg-purple-500/30 selection:text-white">
+        {/* Global Grainy Background Effect */}
+        <div className="fixed inset-0 -z-20 bg-[#05010d]" />
 
-        {/* BACKGROUND GLOBAL */}
-        <div className="fixed inset-0 -z-10 bg-gradient-to-b from-[#0B021D] via-[#12062E] to-[#0B021D]">
-          
-          {/* Glow principal */}
-          <div className="
-            absolute top-[15%] left-1/2 -translate-x-1/2
-            w-[600px] h-[600px]
-            bg-purple-700/20
-            blur-[140px]
-            rounded-full
-          " />
-
-          {/* Glow secondaire */}
-          <div className="
-            absolute bottom-[10%] left-[20%]
-            w-[400px] h-[400px]
-            bg-pink-600/20
-            blur-[140px]
-            rounded-full
-          " />
+        {/* Subtle Global Glows */}
+        <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+          <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-purple-900/10 blur-[150px] rounded-full" />
+          <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-900/10 blur-[150px] rounded-full" />
         </div>
 
-        {/* NAVBAR */}
         <Navbar encres={encres} />
 
-        {/* CONTENU */}
-        <main>
+        <main className="min-h-screen">
           {children}
         </main>
 
-        <Footer/>
-
+        <Footer />
       </body>
     </html>
   )

@@ -1,74 +1,95 @@
+'use client'
+
+import { motion } from "framer-motion"
+
 export default function About({ time }) {
   return (
     <section
       id="about"
-      className="scroll-mt-32 flex flex-col items-center space-y-10"
+      className="flex flex-col items-center"
     >
-      {/* Titre */}
-      <h3 className="font-bold text-center text-2xl md:text-3xl">
-        Mon <span className="text-purple-400">parcours</span>
-      </h3>
+      {/* Title section */}
+      <div className="text-center mb-16 space-y-4">
+        <motion.h3
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl lg:text-5xl font-black text-white"
+        >
+          MON <span className="premium-gradient">PARCOURS</span>
+        </motion.h3>
+        <div className="w-12 h-1 bg-purple-500 mx-auto rounded-full" />
+      </div>
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 max-w-6xl w-full">
+      {/* Grid container */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 max-w-7xl w-full">
         {time.map((item, index) => (
-          <div
+          <motion.div
             key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1, duration: 0.6 }}
             className="
-              relative
-              bg-white/5 backdrop-blur-xl
+              relative group
+              bg-white/[0.03] backdrop-blur-2xl
               border border-white/10
-              text-white
-              p-6 rounded-xl
-              shadow-lg
-              transition
-              hover:scale-[1.02]
-              hover:border-purple-400/40
-              space-y-3
+              p-8 rounded-[2rem]
+              transition-all duration-500
+              hover:bg-white/[0.06]
+              hover:border-purple-500/50
+              hover:-translate-y-2
+              flex flex-col
             "
           >
-            <p className="text-sm text-purple-400 font-semibold">
-              {item.period}
-            </p>
+            {/* Background Glow on hover */}
+            <div className="absolute inset-0 bg-purple-500/5 opacity-0 group-hover:opacity-100 blur-3xl transition-opacity rounded-[2rem]" />
 
-            {item.alternance && (
-              <span
-                className="
-                  absolute top-3 right-3
-                  text-xs font-semibold
-                  px-3 py-1
-                  rounded-md
-                  bg-purple-400/20
-                  text-purple-300
-                  border border-purple-400/30
-                  backdrop-blur
-                "
-              >
-                Alternance
+            <div className="flex justify-between items-start mb-6 relative z-10">
+              <span className="text-sm font-bold text-purple-400 tracking-wider">
+                {item.period}
               </span>
-            )}
+              {item.alternance && (
+                <span className="text-[10px] font-black px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30 uppercase tracking-widest">
+                  Alternance
+                </span>
+              )}
+            </div>
 
+            <div className="space-y-4 relative z-10 flex-grow">
+              <h4 className="text-xl font-bold text-white leading-tight group-hover:text-purple-300 transition-colors">
+                {item.title}
+              </h4>
 
-            <h4 className="font-semibold mt-1">
-              {item.title}
-            </h4>
+              <div className="space-y-2">
+                {item.poste && (
+                  <div className="flex items-center gap-2">
+                    <div className="w-1 h-1 bg-white/20 rounded-full" />
+                    <p className="text-xs font-bold text-white/40 uppercase tracking-tighter">
+                      {item.poste}
+                    </p>
+                  </div>
+                )}
+                {item.diplome && (
+                  <div className="flex items-start gap-2">
+                    <div className="w-1 h-1 mt-1.5 bg-purple-500/40 rounded-full" />
+                    <p className="text-xs font-medium text-white/50 italic">
+                      {item.diplome}
+                    </p>
+                  </div>
+                )}
+              </div>
 
-            {item.poste && (
-              <p className="text-sm text-gray-300">
-                Poste: {item.poste}
+              <p className="text-sm leading-relaxed text-white/40 font-light line-clamp-4 group-hover:line-clamp-none transition-all duration-500">
+                {item.description}
               </p>
-            )}
+            </div>
 
-            {item.diplome && (
-              <p className="text-sm text-gray-300">
-                Diplôme: {item.diplome}
-              </p>
-            )}
-
-            <p className="text-sm text-gray-400">
-              {item.description}
-            </p>
-          </div>
+            {/* Decorative element */}
+            <div className="mt-8 pt-6 border-t border-white/5 relative z-10">
+              <div className="w-8 h-1 bg-white/10 rounded-full group-hover:w-full group-hover:bg-purple-500/30 transition-all duration-700" />
+            </div>
+          </motion.div>
         ))}
       </div>
     </section>
