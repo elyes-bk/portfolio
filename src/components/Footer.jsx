@@ -11,8 +11,8 @@ export default function Footer() {
     ]
 
     const socials = [
-        { name: "LinkedIn", href: "https://linkedin.com" },
-        { name: "GitHub", href: "https://github.com" },
+        { name: "LinkedIn", href: "https://www.linkedin.com/in/elyesbk/" },
+        { name: "GitHub", href: "https://github.com/elyes-bk" },
     ]
 
     return (
@@ -46,8 +46,9 @@ export default function Footer() {
                     </div>
 
                     {/* Socials & Legal */}
-                    <div className="space-y-6">
+                    <div className="space-y-6 flex flex-col">
                         <h4 className="text-xs font-bold text-white uppercase tracking-[0.2em]">Réseaux</h4>
+                        <div className="flex flex-col flex-1 justify-between">
                         <ul className="space-y-4">
                             {socials.map((social) => (
                                 <li key={social.name}>
@@ -56,12 +57,11 @@ export default function Footer() {
                                     </a>
                                 </li>
                             ))}
-                            <li>
-                                <Link href="/politique-confidentialite" className="text-white/40 hover:text-white transition-colors font-light">
+                        </ul>
+                        <Link href="/politique-confidentialite" className="text-white/40 pt-8 md:pt-0 hover:text-white transition-colors font-light">
                                     Confidentialité
                                 </Link>
-                            </li>
-                        </ul>
+</div>
                     </div>
                 </div>
 
