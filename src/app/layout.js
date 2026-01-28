@@ -3,10 +3,38 @@ import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 
 export const metadata = {
-  title: "Elyes Ben Kilani — Dev Web & Cyber",
-  description: "Développeur web passionné par l'innovation et la cybersécurité.",
+  title: "Elyes Ben Kilani — Développeur web & Cybersécurité",
+  description: "Portfolio développeur web et cybersécurité.",
   icons: {
     icon: "/assets/favicon.svg",
+  },
+  openGraph: {
+    title: "Elyes Ben Kilani — Développeur web & Cybersécurité",
+    description: "Portfolio développeur web et cybersécurité.",
+    images: [
+      {
+        url: "/assets/favicon.svg",
+        width: 1200,
+        height: 630,
+        alt: "Elyes Ben Kilani — Développeur web & Cybersécurité",
+      },
+    ],
+    url: "https://elyes-ben-kilani.fr",
+    siteName: "Elyes Ben Kilani",
+    type: "website",
+    locale: "fr_FR",
+  },
+  twitter: {
+    title: "Elyes Ben Kilani — Développeur web & Cybersécurité",
+    description: "Portfolio développeur web et cybersécurité.",
+    images: [
+      {
+        url: "/assets/favicon.svg",
+        width: 1200,
+        height: 630,
+        alt: "Elyes Ben Kilani — Dev Web & Cyber",
+      },
+    ],
   },
 }
 
