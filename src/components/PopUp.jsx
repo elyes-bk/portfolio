@@ -94,7 +94,7 @@ function PopUp({ isOpen, onClose, project }) {
                           href={project.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center"
+                          className="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-100 transition-opacity flex items-center justify-center"
                         >
                           <span className="px-6 py-3 bg-white text-black font-bold rounded-xl flex items-center gap-2">
                             Visiter le site
