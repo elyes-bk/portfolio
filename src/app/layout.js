@@ -1,6 +1,19 @@
 import "./globals.css"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
+import { Inter, Outfit } from "next/font/google"
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+})
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+})
 
 export const metadata = {
   title: "Elyes Ben Kilani — Développeur web & Cybersécurité",
@@ -47,8 +60,8 @@ const encres = [
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr">
-      <body className="antialiased selection:bg-purple-500/30 selection:text-white">
+    <html lang="fr" className={`${inter.variable} ${outfit.variable}`}>
+      <body className="font-sans antialiased selection:bg-purple-500/30 selection:text-white">
         {/* Global Grainy Background Effect */}
         <div className="fixed inset-0 -z-20 bg-[#05010d]" />
 

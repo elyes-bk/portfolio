@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import styles from "@/components/css/stack.module.css"
 
 export default function Stack({ stacks }) {
@@ -46,10 +47,12 @@ export default function Stack({ stacks }) {
               transition={{ delay: index * 0.05 }}
               className="flex flex-col items-center gap-3 p-4 bg-white/[0.05] rounded-2xl border border-white/10 backdrop-blur-md"
             >
-              <img
+              <Image
                 src={stack.imageUrl}
                 alt={stack.title}
-                className="w-10 h-10 object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]"
+                width={40}
+                height={40}
+                className="object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]"
               />
               <span className="text-[10px] font-bold text-white/80 uppercase tracking-tighter">{stack.title}</span>
             </motion.div>
@@ -77,10 +80,12 @@ export default function Stack({ stacks }) {
                   <div className="relative">
                     {/* Subtle glow behind icon */}
                     <div className="absolute inset-0 bg-white/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <img
+                    <Image
                       src={stack.imageUrl}
                       alt={stack.title}
-                      className="relative z-10 w-12 h-12 object-contain transition-all duration-500 group-hover:scale-110 drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]"
+                      width={48}
+                      height={48}
+                      className="relative z-10 object-contain transition-all duration-500 group-hover:scale-110 drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]"
                     />
                   </div>
                   <p className="text-[11px] font-black text-white/60 group-hover:text-white transition-colors tracking-widest uppercase">

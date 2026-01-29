@@ -2,6 +2,7 @@
 
 import React, { useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
 
 function PopUp({ isOpen, onClose, project }) {
   useEffect(() => {
@@ -80,10 +81,12 @@ function PopUp({ isOpen, onClose, project }) {
                   <div className="md:order-2">
                     <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl w-full max-w-[500px] md:max-w-none mx-auto">
                       {project.imageUrl && (
-                        <img
+                        <Image
                           src={project.imageUrl}
                           alt={project.title}
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 50vw"
                         />
                       )}
                       {project.url && (
